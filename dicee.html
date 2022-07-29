@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Dicee</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Indie+Flower|Lobster" rel="stylesheet">
+
+  </head>
+  <body>
+
+    <div class="container">
+      <h1>Refresh Me</h1>
+
+      <div class="dice">
+        <p>Player 1</p>
+        <img class="img1" src="dice1.png">
+      </div>
+
+      <div class="dice">
+        <p>Player 2</p>
+        <img class="img2" src="dice2.png">
+      </div>
+
+    </div>
+
+    <input type="button" class="btnToRoll" value="Roll Dicee" onclick="rollTheDicee()">
+
+  </body>
+
+  <footer>
+    www 🎲 App Brewery 🎲 com
+  </footer>
+  <script>
+   function rollTheDicee(){
+
+   var imgOne = document.querySelector(".img1");
+   var imgTwo = document.querySelector(".img2");
+   var imgesarr=['dice1.png','dice2.png','dice3.png','dice4.png','dice5.png','dice6.png'];
+   var num1 = Math.floor(Math.random()*6 +1);
+   var num2 = Math.floor(Math.random()*6 +1);
+   var randomImag1 =imgesarr[num1 -1];
+   var randomImag2 =imgesarr[num2 -1];
+   imgOne.setAttribute('src',randomImag1);
+   imgTwo.setAttribute('src',randomImag2);
+    }
+  </script>
+</html>
